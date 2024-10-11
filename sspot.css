@@ -1,0 +1,336 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} */
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    width: 80%;
+    height: 95vh;
+    /* border: 1px solid #000; */
+    margin: auto;
+}
+header nav {
+    width: 95%;
+    height: 7%;
+    /* border: 1px solid #000; */
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header nav ul{
+    list-style: none;
+    display: flex;
+}
+header nav ul li{
+    padding: 3px 15px;
+}
+nav li button{
+    width: 80px;
+    font-size: 13px;
+}
+button {
+    background-color: #000;
+    border-radius: 10px;
+    border-width: 7px;
+    color: #fff;
+    cursor: pointer;
+    border-color: #000;
+    font-size: 13px;
+    box-shadow: rgba(83, 109, 254, 0.2)0 2px 4px, rgba(83, 109, 254, 0.15) 0 7px 13px -3px, #d6d6e7 0-3px 0 inset;
+    transition: box-shadow 0.15s transform 0.15s;
+}
+button.focus{
+    outline: none;
+    box-shadow: gray 0 0 0 1.5px inset, rgba(83, 109, 254, 0.4) 0 2px 4px, rgba(83, 109, 254, 0.3 ) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+}
+button:hover{
+    box-shadow: rgba(83, 109, 254, 0.3) 0 4px 8px, rgba(83, 109, 254, 0.2) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+button:active{
+    box-shadow: #d6d6e7 0 3px 7px inset;
+    transform:translateY(2px);
+}
+.modal-container{
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(77, 77, 77, 0.7);
+    transition: all 0.4s;
+    z-index: 99;
+}
+.modal-container.open{
+    visibility: visible;
+    opacity: 1;
+}
+.modal-content {
+    border-radius: 4px;
+    position: relative;
+    height: 450px;
+    width: 450px;
+    min-width: 0%;
+    background: #ffffff;
+    padding: 1em 2em;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+form{
+    width: 450px;
+}
+h2{
+    text-align: center;
+    margin: 20px;
+}
+.bi-x-lg{
+    cursor: pointer;
+    position: absolute;
+    right: 12px;
+    top: 7px;
+}
+
+.form-control{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px 8px;
+    border: 1px 10px 8px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    transform: 0.3s;
+}
+.form-control label{
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.7px;
+    color: rgb(235, 141, 34);
+    transition: 0.3s;
+}
+
+.form-control input{
+    outline: none;
+    border: 3;
+    padding: 4px 0 0;
+    font-size: 14px;
+}
+.form-control:focus-within{
+    border-color: #424242;
+}
+.form-control:focus-within label {
+    color: #424242;
+}
+
+.forget{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+}
+.forget label,
+.terms label{
+    position: unset;
+    cursor:pointer;
+    display: flex;
+    user-select: none;
+    font-size: 12px;
+}
+.form-control-others{
+    margin: 5% auto;
+    text-align: center;
+}
+.registration{
+    position: absolute;
+    transform:translate(500px);
+}
+header nav ul li a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 13px;
+    font-weight: 500;
+    transition: .3s linear;
+}
+header nav ul li a:hover{
+    color: gray;
+}
+
+.video-container {
+    text-align: center;
+    padding: 45px; 
+}
+video {
+    display: inline-block;
+    margin: 0 auto;
+    border-radius: 2%;
+    z-index: 0; 
+    object-fit: cover; 
+}
+
+
+header .trip_bx {
+    position: absolute;
+    bottom: 5%; /* Agar box berada di 20% dari atas video */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%; /* Sesuaikan lebar box */
+    background: rgba(255, 255, 255, 0.8); /* Transparansi agar video sedikit terlihat */
+    padding: 20px;
+    border-radius: 10px;
+    z-index: 1; /* Agar berada di atas video */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2); /* Menambahkan bayangan */
+}
+
+header .trip_bx .search_bx {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px; /* Menambahkan jarak antar elemen */
+}
+
+header .trip_bx .search_bx .card {
+    flex: 1; /* Agar semua card memiliki lebar yang sama */
+}
+
+header .trip_bx .search_bx input[type="button"] {
+    background: #000;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: .3s linear;
+    cursor: pointer;
+}
+
+header .trip_bx .search_bx input[type="button"]:hover {
+   background: gray;
+}
+
+.our-recommend {
+    text-align: center;
+    padding: 50px 0;
+    background-color: #f8f8f8;
+}
+
+.our-recommend h2 {
+    font-size: 36px;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+.catalog-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.catalog-item {
+    width: 300px;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.catalog-item:hover {
+    transform: scale(1.05);
+}
+
+.catalog-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.catalog-item h3 {
+    margin: 15px 0 5px;
+    font-size: 20px;
+    color: #333;
+}
+
+.catalog-item p {
+    margin-bottom: 15px;
+    font-size: 14px;
+    color: #666;
+}
+
+.regional-cafes {
+    padding: 50px;
+    background-color: #f8f8f8;
+}
+
+.regional-cafes h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+}
+
+
+/* Cafes by Region Section Styling */
+.region {
+    margin-bottom: 60px;
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap; /* Prevent line breaks for horizontal layout */
+    padding-bottom: 10px;
+    scrollbar-width: none; /* Hide scrollbar in Firefox */
+}
+
+.region::-webkit-scrollbar {
+    display: none; /* Hide scrollbar in Webkit browsers (Chrome, Safari) */
+}
+
+/* Horizontal scrolling for the cafe grid */
+.cafe-grid {
+    display: inline-flex; /* Use inline-flex to enable horizontal scrolling */
+    gap: 20px; /* Space between the cafe cards */
+    padding-left: 10px;
+}
+
+/* Cafe Card Styling */
+.cafe-card {
+    flex: 0 0 auto; /* Prevent shrinking of the cards */
+    width: 250px; /* Set a fixed width for the cards */
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.cafe-card:hover {
+    transform: translateY(-5px);
+}
+
+.cafe-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.cafe-card p {
+    padding: 10px;
+    font-size: 1rem;
+    color: #333;
+}
+

@@ -1,0 +1,433 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/* *{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+} */
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+header {
+    width: 80%;
+    height: 95vh;
+    /* border: 1px solid #000; */
+    margin: auto;
+}
+header nav {
+    width: 95%;
+    height: 7%;
+    /* border: 1px solid #000; */
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header nav ul{
+    list-style: none;
+    display: flex;
+}
+header nav ul li{
+    padding: 3px 15px;
+}
+nav li button{
+    width: 80px;
+    font-size: 13px;
+}
+button {
+    background-color: #000;
+    border-radius: 10px;
+    border-width: 7px;
+    color: #fff;
+    cursor: pointer;
+    border-color: #000;
+    font-size: 13px;
+    box-shadow: rgba(83, 109, 254, 0.2)0 2px 4px, rgba(83, 109, 254, 0.15) 0 7px 13px -3px, #d6d6e7 0-3px 0 inset;
+    transition: box-shadow 0.15s transform 0.15s;
+}
+button.focus{
+    outline: none;
+    box-shadow: gray 0 0 0 1.5px inset, rgba(83, 109, 254, 0.4) 0 2px 4px, rgba(83, 109, 254, 0.3 ) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+}
+button:hover{
+    box-shadow: rgba(83, 109, 254, 0.3) 0 4px 8px, rgba(83, 109, 254, 0.2) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+    transform: translateY(-2px);
+}
+button:active{
+    box-shadow: #d6d6e7 0 3px 7px inset;
+    transform:translateY(2px);
+}
+.modal-container{
+    visibility: hidden;
+    opacity: 0;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(77, 77, 77, 0.7);
+    transition: all 0.4s;
+    z-index: 99;
+}
+.modal-container.open{
+    visibility: visible;
+    opacity: 1;
+}
+.modal-content {
+    border-radius: 4px;
+    position: relative;
+    height: 450px;
+    width: 450px;
+    min-width: 0%;
+    background: #ffffff;
+    padding: 1em 2em;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+form{
+    width: 450px;
+}
+h2{
+    text-align: center;
+    margin: 20px;
+}
+.bi-x-lg{
+    cursor: pointer;
+    position: absolute;
+    right: 12px;
+    top: 7px;
+}
+
+.form-control{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 10px 8px;
+    border: 1px 10px 8px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    transform: 0.3s;
+}
+.form-control label{
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 600;
+    letter-spacing: 0.7px;
+    color: rgb(235, 141, 34);
+    transition: 0.3s;
+}
+
+.form-control input{
+    outline: none;
+    border: 3;
+    padding: 4px 0 0;
+    font-size: 14px;
+}
+.form-control:focus-within{
+    border-color: #424242;
+}
+.form-control:focus-within label {
+    color: #424242;
+}
+
+.forget{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 12px;
+}
+.forget label,
+.terms label{
+    position: unset;
+    cursor:pointer;
+    display: flex;
+    user-select: none;
+    font-size: 12px;
+}
+.form-control-others{
+    margin: 5% auto;
+    text-align: center;
+}
+.registration{
+    position: absolute;
+    transform:translate(500px);
+}
+header nav ul li a{
+    text-decoration: none;
+    color: #000000;
+    font-size: 13px;
+    font-weight: 500;
+    transition: .3s linear;
+}
+header nav ul li a:hover{
+    color: gray;
+}
+
+header .content {
+    position: relative;
+    width: 100%;
+    height: 93%;
+    /* border: 1px solid #000; */
+}
+header .content::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    /* border: 1px solid #000; */
+    background: url('img/background1.png')no-repeat center center/cover;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+header .content .cont_bx {
+    width: 450px;
+    height: auto;
+    color: #fff;
+    padding: 45px;
+}
+header .content .cont_bx h1{
+    height: 150px;
+    line-height:50px;
+    font-weight: 800;
+    margin-top: 65px;
+}
+header .content .cont_bx p{
+    font-size: 14px;
+    font-weight: 400;
+    color: rgb(241, 241, 241);
+}
+header .content .cont_bx button{
+    margin-top: 20px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: 2px solid #000;
+    background: #000;
+    color: #fff;
+    outline: none;
+    cursor: pointer;
+    transition: .3s linear;
+}
+header .content .cont_bx button:hover{
+    background: rgb(113, 113, 113);
+    border: 2px solid rgb(113, 113, 113);
+}
+
+header .trip_bx {
+    position: relative;
+    width: 95%;
+    height: auto;
+    margin: auto;
+    /* border: 1px solid #000; */
+}
+header .trip_bx .search_bx{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 80%px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    border-radius: 5px;
+    z-index: 1;
+    padding: 50px 20px;
+}
+
+header .trip_bx .search_bx .card {
+    width: 200px;
+    height: 100%;
+    /* border: 1px solid #000; */
+}
+header .trip_bx .search_bx .card h4{
+    font-size: 15px;
+    margin: 0;
+    font-weight: 700;
+}
+header .trip_bx .search_bx .card h4 .bi{
+    position: absolute;
+    font-size: 13px;
+    margin: 2px 0px 0px 5px;
+    transition: .3s linear;
+}
+header .trip_bx .search_bx .card input{
+    margin-top: 3px;
+    padding: 5px 0px;
+    border: none;
+    outline: none;
+    font-size: 13px;
+}
+header .trip_bx .search_bx input[type="button"]{
+    background: #000;
+    color: #fff;
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    transition: .3s linear;
+    cursor: pointer;
+}
+header .trip_bx .search_bx input[type="button"]:hover{
+   background: gray;
+}
+
+header .trip_bx .travel_bx {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: auto;
+    top: 30px;
+    /* background: #000; */
+    /* border: 1px solid #000; */
+    border-radius: 10px;
+    padding-bottom: 20px;
+    box-shadow: 0px 20px 25px -10px rgb(165, 165, 165);
+}
+header .trip_bx .travel_bx::before{
+   content: '';
+   position: absolute;
+   width: 100%;
+   height: 100%;
+   border-radius: 10px;
+   background: rgb(241, 241, 241, .7);
+   backdrop-filter: blur(5px);
+   z-index: -1;
+}
+header .trip_bx .travel_bx h4{
+   margin: 0;
+   padding: 60px 0px 15px 1.7%;
+}
+header .trip_bx .travel_bx .cards{
+   width: 96%;
+   height: auto;
+   margin: 0 auto;
+   /* border: 1px solid #000; */
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+header .trip_bx .travel_bx .cards .card{
+   width: 220px;
+   height: 180px;
+   /* border: 1px solid #000; */
+}
+header .trip_bx .travel_bx .cards .card h3{
+   margin: 0px 0px 10px 0px;
+   display: flex;
+   align-items: center;
+   font-size: 16px;
+   font-weight: 600;
+}
+header .trip_bx .travel_bx .cards .card h3 img{
+   width: 20px;
+   height: 20px;
+   margin-left: 5px ;
+}
+header .trip_bx .travel_bx .cards .card img{
+   width: 100%;
+   height: 50%;
+}
+header .trip_bx .travel_bx .cards .card .btn_city{
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   /* border: 1px solid #000; */
+}
+header .trip_bx .travel_bx .cards .card .btn_city a{
+   text-decoration: none;
+   background: #000;
+   color: #fff;
+   border-radius: 20px;
+   padding: 6px 20px;
+   font-size: 11px;
+   transition: .3s linear;
+}
+header .trip_bx .travel_bx .cards .card .btn_city a:hover{
+   background: gray;
+}
+header .trip_bx .travel_bx .cards .card .btn_city h5{
+   font-size: 11px;
+   font-weight: 500;
+   margin: 0;
+   margin-top: 5px;
+   line-height: 15px;
+}
+header .trip_bx .travel_bx .cards .card .btn_city h5 span{
+   font-size: 13px;
+   font-weight: 700;
+}
+
+.container{
+    display: flex;
+    padding: 20px 4px;
+    width: max-content;
+    gap: 1rem;
+}
+
+.horizontal-scroll {
+    width: 100%;
+    overflow-x: scroll;
+}
+
+.horizontal-scroll::-webkit-scrollbar {
+    display: none;
+}
+
+footer {
+    width: 100%;
+    height: auto;
+    background:  url('img/hhh.jpg');
+    margin-top: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-top: 20px;
+    transform: translateY(100px); /* Footer dimulai di luar layar */
+    opacity: 0; /* Footer tidak terlihat pada awalnya */
+    transition: transform 0.6s ease, opacity 0.6s ease; /* Transisi saat scroll */
+}
+
+footer.visible {
+    transform: translateY(0); /* Footer akan muncul ke posisi normal */
+    opacity: 1; /* Footer menjadi terlihat */
+}
+
+footer.visible {
+    transform: translateY(0); /* Footer akan muncul ke posisi normal */
+    opacity: 1; /* Footer menjadi terlihat */
+}
+
+
+footer h2 {
+    text-align: center;
+    margin: 0;
+    margin-top: 25px;
+    line-height: 30px;
+    font-weight: 600;
+    color: #fff;
+}
+footer h4 {
+    text-align: center;
+    margin: 10px;
+    margin-top: 25px;
+    line-height: 30px;
+    font-weight: 400;
+    color: #fff;
+}
+footer p {
+    color: #fff;
+    text-align: center;
+    width: 500px;
+    font-size: 13px;
+    gap:40px;
+    display: flex;
+
+}

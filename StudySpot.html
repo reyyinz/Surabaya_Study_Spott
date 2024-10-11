@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="sspot.css">
+    <title>Surabaya Study Spot</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h4>SbySpot</h4>
+            <ul id="menu_bx">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="StudySpot.html">Study Spot</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li>
+                    <button id="modalLogin">Login</button>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="video-container">
+            <video width="900" autoplay muted loop>
+                <source src="img/1474267_People_Business_1920x1080.mp4">
+                Your browser does not support the video tag.
+            </video>
+        
+            <div class="trip_bx">
+                <div class="search_bx">
+                    <div class="card">
+                        <h4>Location </h4>
+                        <select>
+                            <option value="">Select your area</option>
+                            <option value="east-surabaya">East Surabaya</option>
+                            <option value="south-surabaya">South Surabaya</option>
+                            <option value="central-surabaya">West Surabaya</option>
+                            <option value="central-surabaya">Central Surabaya</option>
+                            <option value="north-surabaya">North Surabaya</option>
+                        </select>
+                    </div>
+                    <div class="card">
+                        <h4>Price Range</h4>
+                        <select>
+                            <option value="">Select your price range</option>
+                            <option value="1-25000">1 - 25.000</option>
+                            <option value="25000-50000">25.000 - 50.000</option>
+                            <option value="75000-100000">75.000 - 100.000</option>
+                        </select>
+                    </div>
+                    <div class="card">
+                        <h4>Place Type </h4>
+                        <select>
+                            <option value="">Select your Type</option>
+                            <option value="1">Modern</option>
+                            <option value="2">Vintage</option>
+                        </select>
+                    </div>
+                    <input type="button" value="Explore Now">
+                </div>
+            </div>
+        </div>
+        <section class="our-recommend">
+            <h2>Our Recommend </h2>
+            <div class="catalog-container">
+                <!-- Cafe 1 -->
+                <div class="catalog-item">
+                    <a href="https://maps.app.goo.gl/KDNJi4DxLoYz281A9" target="_blank">
+                        <img src="/img/map1.jpeg" alt="Cafe A">
+                    </a>
+                    <h3>Brain Coffee</h3>
+                    <p>Wonokromo <br> Rate: 4.7/5 <br> Rp. 25.000-Rp.50.000 </p>
+                </div>
+        
+                <!-- Cafe 2 -->
+                <div class="catalog-item">
+                    <a href="https://maps.app.goo.gl/6sgTXgSGUPX6bws1A" target="_blank">
+                        <img src="/img/map2.jpg" alt="Cafe B">
+                    </a>
+                    <h3>The Gade Coffee & Gold Surabaya</h3>
+                    <p>Tegalsari <br> Rate: 4.8/5 <br> Rp.25.000-Rp.50.000
+                    </p>
+                </div>
+        
+                <!-- Cafe 3 -->
+                <div class="catalog-item">
+                    <a href="https://maps.app.goo.gl/4CRwdXou79ew8aa7A" target="_blank">
+                        <img src="/img/map3.PNG" alt="Cafe C">
+                    </a>
+                    <h3>Toko Kopi 24</h3>
+                    <p>Tenggilis Mejoyo<br>Rate:4.9/5<br>Rp.1-Rp.25.000</p>
+                </div>
+            </div>
+            <section class="regional-cafes">
+                <h2>Cafes by Region</h2>
+            
+                <div class="region" id="east-surabaya">
+                    <div class="container">
+                    <h3>East Surabaya</h3>
+                    <div class="cafe-grid">
+                        <div class="cafe-card">
+                            <a href="https://maps.app.goo.gl/vanjjwgcv1tGv6Dt6" target="_blank">
+                                <img src="/img/east1.jpeg" alt="Cafe 1 East Surabaya">
+                                <h3>
+                                    Communal Coffee <br>& Eatery</h3>
+                                <p>Mulyorejo <br> Rate: 4.5/5 <br> Rp.50.000-Rp.75.000</p>
+                            </a>
+                        </div>
+                        <div class="cafe-card">
+                            <a href="https://maps.app.goo.gl/7rxa7aBDVNTr2xFX7" target="_blank">
+                                <img src="/img/east2.PNG" alt="Cafe 2 East Surabaya">
+                                <h3>
+                                    Serundai Cafe <br> Surabaya</h3>
+                                <p>Tenggilis Mejoyo <br> Rate: 4.9/5 <br> Rp.25.000-Rp.50.000</p>
+                            </a>
+                        </div>
+                        <div class="cafe-card">
+                            <a href="https://maps.app.goo.gl/pAdxK1DBN5qPTPzW8" target="_blank">
+                                <img src="/img/east4.jpeg" alt="Cafe 3 East Surabaya">
+                                <h3>
+                                    TKV Coffee</h3>
+                                <p> Mulyorejo</p> <br> Rate: 4.8/5 <br> Rp.1-Rp.25.000</p>
+                            </a>
+                        </div>
+                        <div class="cafe-card">
+                            <a href="https://maps.app.goo.gl/mTzxvcz5Ehbqdk6y9" target="_blank">
+                                <img src="/img/east5.jpeg" alt="Cafe 4 East Surabaya">
+                                <h3>
+                                    Eicy Cafe</h3>
+                                <p>Sukolilo <br> Rate: 4.7/5 <br> Rp.25.000-Rp.50.000</p>
+                            </a>
+                        </div>
+                        <div class="cafe-card">
+                            <a href="https://maps.app.goo.gl/DnMjXutM76SJPqzX7" target="_blank">
+                                <img src="/img/east6.jpeg" alt="Cafe 5 East Surabaya">
+                                <h3>
+                                    Uptown Coffee <br>Surabaya</h3>
+                                <p>Gubeng <br> Rate: 4.9/5 <br> Rp.25.000-Rp.50.000</p>
+                            </a>
+                        </div>
+                        <div class="cafe-card">
+                            <a href="https://maps.app.goo.gl/2c5P9FoDeEWDhsZj7" target="_blank">
+                                <img src="/img/east7.jpeg" alt="Cafe 6 East Surabaya">
+                                <h3>
+                                    808 Coffee Bar</h3>
+                                <p>Rungkut <br> Rate: 4.6/5 <br> Rp.1-Rp.25.000</p>
+                            </a>
+                        </div>
+                        <div class="cafe-card">
+                            <a href="https://maps.app.goo.gl/zqpNbHw8dPGyDJfV8" target="_blank">
+                                <img src="/img/east8.jpeg" alt="Cafe 7 East Surabaya">
+                                <h3>
+                                    Nusantara, Warunk <br>Kopi Premium</h3>
+                                <p>Tambaksari <br> Rate: 4.5/5 <br> Rp.1-Rp.25.000</p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+                <!-- West Surabaya Section -->
+                <div class="region" id="west-surabaya">
+                    <div class="container">
+                        <h3>West Surabaya</h3>
+                        <div class="cafe-grid">
+                            <div class="cafe-card">
+                                <a href="https://maps.app.goo.gl/vanjjwgcv1tGv6Dt6" target="_blank">
+                                    <img src="/img/west1.jpeg" alt="Cafe 1 East Surabaya">
+                                    <h3>
+                                        Threelogy Coffee </h3>
+                                    <p>Sambikerep <br> Rate: 4.4/5 <br> Rp.25.000-Rp.50.000</p>
+                                </a>
+                            </div>
+                            <div class="cafe-card">
+                                <a href="https://maps.app.goo.gl/7rxa7aBDVNTr2xFX7" target="_blank">
+                                    <img src="/img/west2.jpeg" alt="Cafe 2 East Surabaya">
+                                    <h3>
+                                        nongkrong Sini</h3>
+                                    <p>Benowo <br> Rate: 4.9/5 <br> Rp.25.000-Rp.50.000</p>
+                                </a>
+                            </div>
+                            <div class="cafe-card">
+                                <a href="https://maps.app.goo.gl/pAdxK1DBN5qPTPzW8" target="_blank">
+                                    <img src="/img/west3.jpeg" alt="Cafe 3 East Surabaya">
+                                    <h3>
+                                        Hue Coffee</h3>
+                                    <p> Mulyorejo</p> <br> Rate: 4.8/5 <br> Rp.1-Rp.25.000</p>
+                                </a>
+                            </div>
+                            <div class="cafe-card">
+                                <a href="https://maps.app.goo.gl/mTzxvcz5Ehbqdk6y9" target="_blank">
+                                    <img src="/img/east5.jpeg" alt="Cafe 4 East Surabaya">
+                                    <h3>
+                                        Eicy Cafe</h3>
+                                    <p>Tandes <br> Rate: 4.7/5 <br> Rp.25.000-Rp.50.000</p>
+                                </a>
+                            </div>
+                            <div class="cafe-card">
+                                <a href="https://maps.app.goo.gl/DnMjXutM76SJPqzX7" target="_blank">
+                                    <img src="/img/east6.jpeg" alt="Cafe 5 East Surabaya">
+                                    <h3>
+                                        Uptown Coffee <br>Surabaya</h3>
+                                    <p>Gubeng <br> Rate: 4.9/5 <br> Rp.25.000-Rp.50.000</p>
+                                </a>
+                            </div>
+                            <div class="cafe-card">
+                                <a href="https://maps.app.goo.gl/2c5P9FoDeEWDhsZj7" target="_blank">
+                                    <img src="/img/east7.jpeg" alt="Cafe 6 East Surabaya">
+                                    <h3>
+                                        808 Coffee Bar</h3>
+                                    <p>Rungkut <br> Rate: 4.6/5 <br> Rp.1-Rp.25.000</p>
+                                </a>
+                            </div>
+                            <div class="cafe-card">
+                                <a href="https://maps.app.goo.gl/zqpNbHw8dPGyDJfV8" target="_blank">
+                                    <img src="/img/east8.jpeg" alt="Cafe 7 East Surabaya">
+                                    <h3>
+                                        Nusantara, Warunk <br>Kopi Premium</h3>
+                                    <p>Tambaksari <br> Rate: 4.5/5 <br> Rp.1-Rp.25.000</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+            
+                <!-- South Surabaya Section -->
+                <div class="region" id="south-surabaya">
+                    <div class="container">
+                        <h3>South Surabaya</h3>
+                        <div class="cafe-grid">
+                            <div class="cafe-card">
+                                <a href="https://maps.app.goo.gl/vanjjwgcv1tGv6Dt6" target="_blank">
+                                    <img src="/img/east1.jpeg" alt="Cafe 1 East Surabaya">
+                                    <h3>
+                                        Communal Coffee <br>& Eatery</h3>
+                                    <p>Mulyorejo <br> Rate: 4.5/5 <br> Rp.50.000-Rp.75.000</p>
+                                </a>
+                            </div>
+                            <div class="cafe-card">
+                                <a href="https://maps.app.goo.gl/7rxa7aBDVNTr2xFX7" target="_blank">
+                                    <img src="/img/east2.PNG" alt="Cafe 2 East Surabaya">
+                                    <h3>
+                                        Serundai Cafe <br> Surabaya</h3>
+                                    <p>Tenggilis Mejoyo <br> Rate: 4.9/5 <br> Rp.25.000-Rp.50.000</p>
+                                </a>
+                            </div>
+                            <div class="cafe-card">
+                                <a href="https://maps.app.goo.gl/pAdxK1DBN5qPTPzW8" target="_blank">
+                                    <img src="/img/east4.jpeg" alt="Cafe 3 East Surabaya">
+                                    <h3>
+                                        TKV Coffee</h3>
+                                    <p> Mulyorejo</p> <br> Rate: 4.8/5 <br> Rp.1-Rp.25.000</p>
+                                </a>
+                            </div>
+                            <div class="cafe-card">
+                                <a href="https://maps.app.goo.gl/mTzxvcz5Ehbqdk6y9" target="_blank">
+                                    <img src="/img/east5.jpeg" alt="Cafe 4 East Surabaya">
+                                    <h3>
+                                        Eicy Cafe</h3>
+                                    <p>Sukolilo <br> Rate: 4.7/5 <br> Rp.25.000-Rp.50.000</p>
+                                </a>
+                            </div>
+                            <div class="cafe-card">
+                                <a href="https://maps.app.goo.gl/DnMjXutM76SJPqzX7" target="_blank">
+                                    <img src="/img/east6.jpeg" alt="Cafe 5 East Surabaya">
+                                    <h3>
+                                        Uptown Coffee <br>Surabaya</h3>
+                                    <p>Gubeng <br> Rate: 4.9/5 <br> Rp.25.000-Rp.50.000</p>
+                                </a>
+                            </div>
+                            <div class="cafe-card">
+                                <a href="https://maps.app.goo.gl/2c5P9FoDeEWDhsZj7" target="_blank">
+                                    <img src="/img/east7.jpeg" alt="Cafe 6 East Surabaya">
+                                    <h3>
+                                        808 Coffee Bar</h3>
+                                    <p>Rungkut <br> Rate: 4.6/5 <br> Rp.1-Rp.25.000</p>
+                                </a>
+                            </div>
+                            <div class="cafe-card">
+                                <a href="https://maps.app.goo.gl/zqpNbHw8dPGyDJfV8" target="_blank">
+                                    <img src="/img/east8.jpeg" alt="Cafe 7 East Surabaya">
+                                    <h3>
+                                        Nusantara, Warunk <br>Kopi Premium</h3>
+                                    <p>Tambaksari <br> Rate: 4.5/5 <br> Rp.1-Rp.25.000</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+            
+            </section>
+            
+        </section>
+        
+        
+        </div>
+    </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>

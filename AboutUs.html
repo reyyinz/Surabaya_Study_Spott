@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="aboutus.css">
+    <title>Surabaya Study Spot</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h4>SbySpot</h4>
+            <ul id="menu_bx">
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="StudySpot.html">Study Spot</a></li>
+                <li><a href="AboutUs.html">About Us</a></li>
+                <li>
+                    <button id="modalLogin">Login</button>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="modal-container">
+            <div class="modal-content">
+                <i class="bi bi-x-lg" onclick="closeModalContainer()"></i>
+                <form class="login">
+                    <h2>
+                        login
+                    </h2>
+
+                    <div class="form-control">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter your email">
+                    </div>
+                    <div class="form-control">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter your password">
+                    </div>
+                    <div class="form-control-others">
+                        <div class="forget">
+                            <label for="rememeber" class="remember"> 
+                                <input type="checkbox" id="remember">
+                                &nbsp; Remember Me </label>
+
+                                <a href="#">Forget Password?</a>
+                        </div>
+                    </div>
+                    <div class="form-control-others">
+                        <button>Login</button>
+                        <div class="form-control-others">
+                            <label for="create">
+                                Don't have an account?
+                                <a href="javascript:void(0)" id="Create">Sign Up Now</a>
+                            </label>
+                        </div>
+                    </div>
+                </form>
+
+                <form class="registration">
+                    <h2>
+                        Registration
+                    </h2>
+                    <div class="form-control">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" placeholder="Enter your username">
+                    </div>
+                    <div class="form-control">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter your email">
+                    </div>
+
+                    <div class="form-control">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" placeholder="Enter your password">>
+                    </div>
+                    <div class="form-control-others">
+                        <div class="terms">
+                            <label for="terms" class="terms"> 
+                                <input type="checkbox" id="terms">
+                                &nbsp; I read and agree to Terms&condition </label>
+
+                        </div>
+                    </div>
+                    <div class="form-control-others">
+                        <button>Create Account</button>
+                        <div class="form-control-others">
+                            <label for="create">
+                                Already have an account?
+                                <a href="javascript:void(0)" id="login">LoginHere</a>
+                            </label>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+<div>
+
+    <h1>About Us</h1>
+    <div class="content">
+        <div class="cont_bx">
+            <div class="text-content">
+                <h3>The Story Behind</h3>
+                <p>Many of our friends, Surabaya students, have to face laptops for a long time to complete their assignments or study, this makes many students often stressed and burn out, one of the reasons is because the room atmosphere is always the same and boring.</p>
+            </div>
+            <img src="img/belajar.jpg" class="content-img">
+        </div>
+        
+        <div class="cont_bx reverse-layout">
+            <img src="img/senyum.png" class="content-img">
+            <div class="text-content">
+                <h3>Vision and Mission</h3>
+                <p>We want to help students overcome boredom in their surroundings by providing an inspiring and refreshing learning environment. To achieve this, we have developed a website that offers a choice of convenient and conducive locations, suitable for completing tasks. and stay productive.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="wrapper">
+
+        <div class="title">
+            <h4>Our Team</h4>
+        </div>
+
+        <div class="card_Container">
+
+            <div class="card">
+
+                <div class="imbBx">
+                    <img src="/img/aku.jpeg" alt="">
+                </div>
+
+                <div class="content">
+                    <div class="contentBx">
+                        <h3>Nikita Azzahra<br><span>Web Developer</span></h3>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="card">
+
+                <div class="imbBx">
+                    <img src="/img/putri.jpeg" alt="">
+                </div>
+
+                <div class="content">
+                    <div class="contentBx">
+                        <h3>Afrilia Putri <br><span>Report Maker</span></h3>
+                    </div>
+                </div>
+
+            </div>
+
+            </div>
+        </div>
+
+    </div>
